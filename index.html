@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rojan Adhikari</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -594,40 +595,41 @@
                 <!-- Contact Form -->
 
 
-                <form class="form__container">
+
+                <form class="form__container" onsubmit="onSubmitForm(event)">
                     <div class="form__row">
                         <label for="fname">Full Name
                         </label>
-                        <input type="text" name="fname">
+                        <input type="text" id="name" name="fname" required>
                     </div>
                     <div class="form__row">
                         <label for="email">Email
                         </label>
-                        <input type="email" name="email">
+                        <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form__row">
                         <label for="phone">Phone
                         </label>
-                        <input type="phone" name="phone">
+                        <input type="tel" id="phone" name="phone" required>
                     </div>
                     <div class="form__row">
                         <label for="subject">Subject
                         </label>
-                        <input type="text" name="subject">
+                        <input type="text" id="subject" name="subject" required>
                     </div>
                     <div class="form__row">
                         <label for="message">Message
                         </label>
-                        <textarea rows="6" name="message"></textarea>
-
+                        <textarea rows="6" id="message" name="message" required></textarea>
                     </div>
 
                     <div class="btn__submit">
-                        <button>
+                        <button type="submit">
                             Send Message
                         </button>
                     </div>
                 </form>
+
             </section>
 
 
@@ -638,8 +640,8 @@
     </div>
 
 
-
-
+    <script type=" text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
 </body>
 
