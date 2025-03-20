@@ -312,7 +312,7 @@ INTRODUCE SECTION
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  text-align: justify;
+  /* text-align: justify; */
   gap: 1rem;
 }
 
