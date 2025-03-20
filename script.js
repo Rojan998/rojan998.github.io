@@ -5,7 +5,7 @@ function onSubmitForm(e) {
   // Send the email
   Email.send({
     Host: 'smtp.gmail.com',
-    Username: 'adhikar.rojan619@gmail.com',
+    Username: 'abc@gmail.com',
     Password: 'password', // Consider using more secure methods for handling passwords
     To: 'rojanadhikari9001@gmail.com',
     From: document.getElementById('email').value,
@@ -27,4 +27,25 @@ function onSubmitForm(e) {
     // Optionally, reset the form here if you want
     document.querySelector('.form__container').reset();
   });
+}
+
+const startDate = () => {
+  let d = new Date();
+  document.getElementById('date').innerHTML = d.getFullYear();
+};
+startDate();
+
+function contact_us() {
+  document
+    .getElementById('container__contactus')
+    .scrollIntoView({ behavior: 'smooth' });
+}
+
+function download_cv() {
+  const link = document.createElement('a');
+  link.href = 'Rojan_Adhikari_Resume-Final.pdf'; // Ensure the file is in the correct directory
+  link.download = 'Rojan_Adhikari_Resume.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }

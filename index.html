@@ -1,648 +1,696 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rojan Adhikari</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-</head>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="container">
+      <div class="container__sidebar">
+        <div class="container__sidebar__border">
+          <img
+            src="/assets/circle-cropped.png"
+            alt="Rojan Image"
+            class="profile__image"
+          />
+          <div class="profile__description">
+            <h3>Rojan Adhikari</h3>
+            <a class="email">adhikari.rojan619@gmail.com</a>
+            <h3>+1 608-480-9488</h3>
+            <p>Oklahoma, USA</p>
+          </div>
+          <div class="copyright">
+            <div>
+              <span
+                >Made by <i class="fas fa-heart heart color-green"></i
+              ></span>
+              Yours Truly
+            </div>
+            <p>
+              Copyright <i class="fas fa-copyright"></i> <span id="date"></span>
+            </p>
+          </div>
 
-
-        <div class="container__sidebar">
-            <div class="container__sidebar__border">
-                <img src="/assets/circle-cropped.png" alt="Rojan Image" class="profile__image">
-                <div class="profile__description">
-                    <h3>Rojan Adhikari</h3>
-                    <a class="email">adhikari.rojan619@gmail.com</a>
-                    <h3>+1 608-480-9488</h3>
-                    <p>Oklahoma, USA </p>
-                </div>
-                <div class="copyright">
-                    <i class="far fa-copyright"></i>
-                    <p>2023. Made with <i class="fas fa-heart"></i> All Rights Reserved</p>
-
-                </div>
-
-                <div class="socialmedia">
-                    <ul>
-                        <li><a href="https://www.instagram.com/rozan_adhikari7/" target="_blank">
+          <div class="socialmedia">
+            <ul>
+              <!-- <li><a href="https://www.instagram.com/rozan_adhikari7/" target="_blank">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                        </li>
-                        <li><a href="https://twitter.com/Rojan998" target="_blank"><i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li><a href="https://github.com/Rojan998" target="_blank"><i class="fab fa-github"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/rojan998/" target="_blank"><i
-                                    class="fab fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
+                        </li> -->
+              <li>
+                <a href="https://twitter.com/Rojan998" target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://github.com/Rojan998" target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/rojan998/" target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
 
-                <div class="hire__me">
-                    <button>
-                        <i class="fas fa-envelope"></i>
-                        HIRE ME!
-                    </button>
+          <div class="hire__me">
+            <button onclick="contact_us()">
+              <i class="fas fa-envelope"></i>
+              <span> Hire Me </span>
+            </button>
+          </div>
+          <div class="download__resume">
+            <button onclick="download_cv()">
+              <i class="fas fa-file"></i>
+              <span> Download CV </span>
+            </button>
+          </div>
+        </div>
+      </div>
 
-                </div>
-                <div class="download__resume">
-                    <button>
-                        <i class="fas fa-file"></i>
-                        Download CV
-                    </button>
+      <div class="container__middle">
+        <section id="container__introduce">
+          <div class="introduce__button__div">
+            <button class="btn-introduce">
+              <i class="fas fa-home"></i>Introduce
+            </button>
+          </div>
 
-                </div>
+          <div class="intro">
+            <p>Hi I'm <span class="color-green">Rojan,</span></p>
+            <p>
+              a <span class="color-green">D</span>evops
+              <span class="color-green">E</span>ngineer
+            </p>
+            <p>and Developer</p>
+          </div>
+          <div class="intro__description">
+            <p>
+              I specialize in designing scalable, secure, and highly available
+              systems to streamline software delivery, leveraging my strong
+              background in automation, cloud infrastructure, and CI/CD
+              pipelines.
+            </p>
+          </div>
+
+          <div class="grid__experience">
+            <div class="grid__experience__years">
+              <p class="exp-years"><span class="color-green">7+</span></p>
+              <p class="description">years of experience</p>
             </div>
-        </div>
 
+            <div class="grid__projects__completed">
+              <p class="projects"><span class="color-green">10+</span></p>
+              <p class="description">projects completed</p>
+            </div>
+          </div>
+        </section>
 
-        <div class="container__middle">
+        <!-- About me  -->
+        <section id="container__about">
+          <div class="about__button__div">
+            <button class="btn-introduce">
+              <i class="fas fa-user"></i>About
+            </button>
+          </div>
 
-            <section id="container__introduce">
+          <div class="intro">
+            <p>
+              Every seamless deployment starts with a
+              <span class="color-green">strong foundation</span>
+            </p>
+          </div>
+          <div class="intro__description">
+            <p>
+              With 7 years of experience in the DevOps field, I have worked with
+              startups, enterprises, and cloud-native applications to enhance
+              development workflows. I am a problem solver who thrives on
+              optimizing infrastructure, automating processes, and ensuring
+              seamless deployments. My expertise includes cloud computing,
+              containerization, and infrastructure as code (IaC), all focused on
+              improving efficiency and reducing operational overhead.
+            </p>
+          </div>
+        </section>
 
-                <div class="introduce__button__div">
-                    <button class="btn-introduce"><i class="fas fa-home"></i>Introduce</button>
+        <!-- Education and Experience  -->
+        <section id="container__education">
+          <div class="education__button__div">
+            <button class="btn-introduce">
+              <i class="fas fa-file"></i>Resume
+            </button>
+          </div>
+
+          <div class="intro">
+            <p>My <span class="color-green">Experience</span></p>
+          </div>
+
+          <div class="tree__container">
+            <!-- Branch 1 -->
+
+            <div class="box__container">
+              <div class="circle"></div>
+
+              <!-- Timeline 1 -->
+              <div class="education__description">
+                <h1 class="timeline__date">2023 - present</h1>
+                <div class="education__description__content">
+                  <p class="timeline__title">
+                    MS in Computational Science - Computer Science
+                  </p>
+                  <p class="timeline__position">
+                    University of Central Oklahoma
+                  </p>
+                  <p>Full time Student</p>
                 </div>
+              </div>
+            </div>
 
-                <div class="intro">
-                    <p>
-                        Hi I'm <span class="color-green">Rojan,</span>
-                    </p>
-                    <p>Creative Designer</p>
-                    <p>and Developer</p>
+            <!-- Branch 2 -->
+            <div class="box__container">
+              <div class="circle"></div>
 
+              <!-- Timeline 2 -->
+              <div class="education__description">
+                <h1 class="timeline__date">2021 - 2023</h1>
+                <div class="education__description__content">
+                  <p class="timeline__title">Senior DevOps Engineer</p>
+                  <p class="timeline__position">Yasok Co</p>
 
-
+                  <p>
+                    Led the migration of on-premise infrastructure to AWS,
+                    reducing costs by 30%. Designed and implemented CI/CD
+                    pipelines using Jenkins, GitHub Actions, and ArgoCD,
+                    improving deployment efficiency. Developed infrastructure as
+                    code (IaC) using Terraform and AWS CloudFormation for
+                    scalable deployments. Enhanced monitoring and observability
+                    with Prometheus, Grafana, and ELK stack. Implemented
+                    security best practices, including IAM policies and
+                    automated compliance checks.
+                  </p>
                 </div>
-                <div class="intro__description">
-                    <p>I design and code beautifully simple things and i love what i do. Just simple like that!</p>
+              </div>
+            </div>
+
+            <!-- Branch 3 -->
+            <div class="box__container">
+              <div class="circle"></div>
+
+              <!-- Timeline 3 -->
+              <div class="education__description">
+                <h1 class="timeline__date">2018 - 2021</h1>
+                <div class="education__description__content">
+                  <p class="timeline__title">Devops Engineer</p>
+                  <p class="timeline__position">WEN Solutions</p>
+
+                  <p>
+                    Built and maintained Kubernetes clusters for
+                    microservices-based applications. Automated deployments and
+                    release management using Helm charts and Docker containers.
+                    Collaborated with development teams to implement GitOps
+                    workflows and streamline deployments. Managed cloud services
+                    on AWS and Azure, optimizing cost and performance.
+                  </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-                <div class="grid__experience">
-                    <div class="grid__experience__years">
-                        <p class="exp-years"><span class="color-green">10+</span>
-                        </p>
-                        <p class="description">years of experience</p>
-                    </div>
+        <!-- Services -->
+        <section id="container__services">
+          <div class="services__button__div">
+            <button class="btn-introduce">
+              <i class="fas fa-boxes"></i>Services
+            </button>
+          </div>
 
+          <div class="intro">
+            <p>My <span class="color-green">Specializations</span></p>
+          </div>
 
-                    <div class="grid__projects__completed">
-                        <p class="projects"><span class="color-green">182+</span>
-                        </p>
-                        <p class="description">projects completed</p>
-                    </div>
+          <!-- Box 1 Flex -->
+          <div class="outer__box">
+            <div class="title_logo">
+              <h1>Infrastructure as Code (IaC)</h1>
+              <div class="color-green">
+                <i class="fas fa-desktop"></i>
+              </div>
+            </div>
+            <div class="services_description">
+              <p>
+                I create scalable, automated, and secure infrastructure using
+                tools like Terraform, Ansible, and AWS CloudFormation.
+              </p>
+            </div>
 
+            <div class="project_number">4 Projects</div>
+          </div>
+
+          <!-- Box 2 Flex -->
+          <div class="outer__box">
+            <div class="title_logo">
+              <h1>CI/CD Pipeline Automation</h1>
+              <div class="color-green">
+                <!-- <i class="fas fa-code"></i> -->
+                <i class="fas fa-infinity"></i>
+              </div>
+            </div>
+            <div class="services_description">
+              <p>
+                I streamline software delivery with robust pipelines using
+                Jenkins, GitHub Actions, and ArgoCD for continuous integration
+                and deployment.
+              </p>
+            </div>
+
+            <div class="project_number">5 Projects</div>
+          </div>
+
+          <!-- Box 3 Flex -->
+          <div class="outer__box">
+            <div class="title_logo">
+              <h1>Cloud & Kubernetes Solutions</h1>
+              <div class="color-green">
+                <!-- <i class="fas fa-hashtag"></i> -->
+                <i class="fas fa-cloud"></i>
+              </div>
+            </div>
+            <div class="services_description">
+              <p>
+                I deploy, manage, and optimize cloud environments using AWS,
+                Azure, and Kubernetes, ensuring high availability and
+                scalability.
+              </p>
+            </div>
+
+            <div class="project_number">4 Projects</div>
+          </div>
+
+          <!-- Box 3 Flex -->
+          <div class="outer__box">
+            <div class="title_logo">
+              <h1>Monitoring & Security</h1>
+              <div class="color-green">
+                <!-- <i class="fas fa-hashtag"></i> -->
+                <i class="fas fa-solid fa-user-secret"></i>
+              </div>
+            </div>
+            <div class="services_description">
+              <p>
+                I implement proactive monitoring with Prometheus, Grafana, and
+                ELK Stack while enforcing security best practices in DevOps
+                workflows.
+              </p>
+            </div>
+
+            <div class="project_number">4 Projects</div>
+          </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="container__skills">
+          <div class="skills__button__div">
+            <button class="btn-introduce">
+              <i class="fas fa-hat-wizard"></i>My Skills
+            </button>
+          </div>
+
+          <div class="intro">
+            <p>My <span class="color-green">Advantages</span></p>
+          </div>
+
+          <!-- Grid Container for cirlce -->
+          <div class="grid__circle__main__container">
+            <!-- single circle__container 1 -->
+            <div class="circle__container">
+              <div class="skill_circle">
+                <img class="skill_image" src="/assets/linux.svg" alt="" />
+                <span class="color-green timeline__title">92%</span>
+                <div>Linux</div>
+              </div>
+            </div>
+
+            <!-- single circle__container 1 -->
+            <div class="circle__container">
+              <div class="skill_circle">
+                <img class="skill_image" src="/assets/bash.svg" alt="" />
+                <span class="color-green timeline__title">92%</span>
+                <div>Bash</div>
+              </div>
+            </div>
+
+            <!-- single circle__container 1 -->
+            <div class="circle__container">
+              <div class="skill_circle">
+                <img class="skill_image" src="/assets/python.svg" alt="" />
+                <span class="color-green timeline__title">92%</span>
+                <div>Python</div>
+              </div>
+            </div>
+
+            <!-- single circle__container 1 -->
+            <div class="circle__container">
+              <div class="skill_circle">
+                <img class="skill_image" src="/assets/powershell.svg" alt="" />
+                <span class="color-green timeline__title">92%</span>
+                <div>Powershell</div>
+              </div>
+            </div>
+
+            <!-- single circle__container 1 -->
+            <div class="circle__container">
+              <div class="skill_circle">
+                <img class="skill_image" src="/assets/git.svg" alt="" />
+                <span class="color-green timeline__title">92%</span>
+                <div>GIT</div>
+              </div>
+            </div>
+
+            <!-- single circle__container 1 -->
+            <div class="circle__container">
+              <div class="skill_circle">
+                <img
+                  class="skill_image"
+                  src="/assets/githubactions.svg"
+                  alt=""
+                />
+                <span class="color-green timeline__title">92%</span>
+                <div>GitHub Actions</div>
+              </div>
+            </div>
+
+            <!-- single circle__container 1 -->
+            <div class="circle__container">
+              <div class="skill_circle">
+                <img class="skill_image" src="/assets/jenkins.svg" alt="" />
+                <span class="color-green timeline__title">92%</span>
+                <div>Jenkins</div>
+              </div>
+            </div>
+
+            <!-- single circle__container 1 -->
+            <div class="circle__container">
+              <div class="skill_circle">
+                <img class="skill_image" src="/assets/gitlab.svg" />
+                <span class="color-green timeline__title">92%</span>
+                <div>GitLab CI/CD</div>
+              </div>
+            </div>
+
+            <!-- single circle__container 1 -->
+            <div class="circle__container">
+              <div class="skill_circle">
+                <img class="skill_image" src="/assets/aws.svg" />
+                <span class="color-green timeline__title">92%</span>
+                <div>AWS</div>
+              </div>
+            </div>
+
+            <!-- single circle__container 1 -->
+            <div class="circle__container">
+              <div class="skill_circle">
+                <img class="skill_image" src="/assets/azure.svg" />
+                <span class="color-green timeline__title">92%</span>
+                <div>Azure</div>
+              </div>
+            </div>
+
+            <!-- single circle__container 1 -->
+            <div class="circle__container">
+              <div class="skill_circle">
+                <img class="skill_image" src="/assets/googlecloud.svg" />
+                <span class="color-green timeline__title">92%</span>
+                <div>Google Cloud</div>
+              </div>
+            </div>
+
+            <!-- single circle__container 1 -->
+            <div class="circle__container">
+              <div class="skill_circle">
+                <img class="skill_image" src="/assets/docker.svg" />
+                <span class="color-green timeline__title">92%</span>
+                <div>Docker</div>
+              </div>
+            </div>
+            <!-- single circle__container 1 -->
+            <div class="circle__container">
+              <div class="skill_circle">
+                <img class="skill_image" src="/assets/kuber.svg" />
+                <span class="color-green timeline__title">92%</span>
+                <div>Kubernetes</div>
+              </div>
+            </div>
+            <!-- single circle__container 1 -->
+            <div class="circle__container">
+              <div class="skill_circle">
+                <img class="skill_image" src="/assets/helm.svg" />
+                <span class="color-green timeline__title">92%</span>
+                <div>Helm</div>
+              </div>
+            </div>
+            <!-- single circle__container 1 -->
+            <div class="circle__container">
+              <div class="skill_circle">
+                <img class="skill_image" src="/assets/terraform.svg" />
+                <span class="color-green timeline__title">92%</span>
+                <div>Terraform</div>
+              </div>
+            </div>
+            <!-- single circle__container 1 -->
+            <div class="circle__container">
+              <div class="skill_circle">
+                <img class="skill_image" src="/assets/ansible.svg" />
+                <span class="color-green timeline__title">92%</span>
+                <div>Ansible</div>
+              </div>
+            </div>
+            <!-- single circle__container 1 -->
+            <div class="circle__container">
+              <div class="skill_circle">
+                <img class="skill_image" src="/assets/prometheus.svg" />
+                <span class="color-green timeline__title">92%</span>
+                <div>Prometheus</div>
+              </div>
+            </div>
+            <!-- single circle__container 1 -->
+            <div class="circle__container">
+              <div class="skill_circle">
+                <img class="skill_image" src="/assets/grafana.svg" />
+                <span class="color-green timeline__title">92%</span>
+                <div>Grafana</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects Display Section-->
+        <section id="container__projects">
+          <div class="projects__button__div">
+            <button class="btn-introduce">
+              <i class="fas fa-solid fa-user"></i>
+              Portfolio
+            </button>
+          </div>
+
+          <div class="intro">
+            <p>My <span class="color-green">Projects</span></p>
+          </div>
+
+          <!-- display all the done projects -->
+          <div class="project__grid__main__container">
+            <!-- individual grid col 1 -->
+            <div class="grid__col">
+              <img class="project-image" src="/assets/project-1.jpg" alt="" />
+              <div class="project__description">
+                <span class="project__title__center">
+                  Student Management System
+                </span>
+                <p>
+                  Automated Cloud Infrastructure Deployment Developed a
+                  Terraform-based automated provisioning system for multi-cloud
+                  environments, reducing setup time by 50%.
+                </p>
+              </div>
+              <div class="project__stack">
+                <!-- Project Stack Buttons -->
+                <div class="stack__buttons">
+                  <button class="btn-rounded__projects">Docker</button>
+                  <button class="btn-rounded__projects">Kubernetes</button>
+                  <button class="btn-rounded__projects">Bash</button>
                 </div>
-
-
-            </section>
-
-
-
-
-
-
-
-
-            <!-- About me  -->
-            <section id="container__about">
-
-                <div class="about__button__div">
-                    <button class="btn-introduce"><i class="fas fa-user"></i>About</button>
+                <!-- Project Stack Names and Source Code Button -->
+                <div class="project__name">
+                  <button class="btn-source-code">
+                    Source Code
+                    <i class="fas fa-arrow-right"></i>
+                  </button>
                 </div>
+              </div>
+            </div>
 
-                <div class="intro">
-                    <p>
-                        Every great design begin with an even <span class="color-green">better story</span>
-                    </p>
-
-
-
-
+            <!-- individual grid col 2-->
+            <div class="grid__col">
+              <img class="project-image" src="/assets/project-2.jpg" alt="" />
+              <div class="project__description">
+                <span class="project__title__center">
+                  Kubernetes Microservices Architecture
+                </span>
+                <p>
+                  Designed and deployed a Kubernetes-based microservices
+                  architecture using Helm and Istio, ensuring high availability
+                  and scalability.
+                </p>
+              </div>
+              <div class="project__stack">
+                <!-- Project Stack Buttons -->
+                <div class="stack__buttons">
+                  <button class="btn-rounded__projects">Docker</button>
+                  <button class="btn-rounded__projects">Kubernetes</button>
+                  <button class="btn-rounded__projects">Bash</button>
                 </div>
-                <div class="intro__description">
-                    <p>Since beginning my journey as a freelance designer nearly 8 years ago, I've done remote work for
-                        agencies, consulted for
-                        startups, and collaborated with talented people to create digital products for both business and
-                        consumer use. I'm
-                        quietly confident, naturally curious, and perpetually working on improving my chopsone design
-                        problem at a time.</p>
+                <!-- Project Stack Names and Source Code Button -->
+                <div class="project__name">
+                  <button class="btn-source-code">
+                    Source Code
+                    <i class="fas fa-arrow-right"></i>
+                  </button>
                 </div>
+              </div>
+            </div>
 
-
-
-
-            </section>
-
-
-
-
-
-
-
-            <!-- Education and Experience  -->
-            <section id="container__education">
-
-                <div class="education__button__div">
-                    <button class="btn-introduce"><i class="fas fa-file"></i>Resume</button>
+            <!-- individual grid col 3 -->
+            <div class="grid__col">
+              <img class="project-image" src="/assets/project-3.jpg" alt="" />
+              <div class="project__description">
+                <span class="project__title__center">
+                  Enterprise CI/CD Implementation
+                </span>
+                <p>
+                  Built a robust CI/CD pipeline for a fintech company, reducing
+                  software release cycle time by 40%.
+                </p>
+              </div>
+              <div class="project__stack">
+                <!-- Project Stack Buttons -->
+                <div class="stack__buttons">
+                  <button class="btn-rounded__projects">Docker</button>
+                  <button class="btn-rounded__projects">Kubernetes</button>
+                  <button class="btn-rounded__projects">Bash</button>
                 </div>
-
-                <div class="intro">
-                    <p>
-                        My <span class="color-green">Experience</span>
-                    </p>
-
-
-
-
+                <!-- Project Stack Names and Source Code Button -->
+                <div class="project__name">
+                  <button class="btn-source-code">
+                    Source Code
+                    <i class="fas fa-arrow-right"></i>
+                  </button>
                 </div>
+              </div>
+            </div>
 
-
-
-                <div class="tree__container">
-
-                    <!-- Branch 1 -->
-                    <div class="box__container">
-                        <div class="circle"></div>
-
-
-                        <!-- Timeline 1 -->
-                        <div class="education__description">
-                            <h1 class="timeline__date">2020 - present</h1>
-                            <div class="education__description__content">
-                                <div>
-
-                                    <p class="timeline__title">Framer Desinger & Developer</p>
-                                    <p class="timeline__position">WEN Solution</p>
-
-                                </div>
-
-                                <div>
-
-
-                                    <p class="timeline__title">Framer Desinger & Developer</p>
-                                    <p class="timeline__position">WEN Solution</p>
-
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-
-
-                    <!-- Branch 2 -->
-
-                    <div class="box__container">
-                        <div class="circle"></div>
-
-
-                        <!-- Timeline 1 -->
-                        <div class="education__description">
-                            <h1 class="timeline__date">2020 - present</h1>
-                            <div class="education__description__content">
-                                <p class="timeline__title">Framer Desinger & Developer</p>
-                                <p class="timeline__position">WEN Solution</p>
-
-
-                                <p>Framer Desinger & Developer</p>
-                                <p>WEN Solution</p>
-
-                            </div>
-
-
-                        </div>
-                    </div>
-
-
-                    <!-- Branch 3 -->
-                    <div class="box__container">
-                        <div class="circle"></div>
-
-
-                        <!-- Timeline 1 -->
-                        <div class="education__description">
-                            <h1 class="timeline__date">2020 - present</h1>
-                            <div class="education__description__content">
-                                <p class="timeline__title">Framer Desinger & Developer</p>
-                                <p class="timeline__position">WEN Solution</p>
-
-
-                                <p>Framer Desinger & Developer</p>
-                                <p>WEN Solution</p>
-
-                            </div>
-
-
-                        </div>
-                    </div>
-
-
-                    <!-- Branch 4 -->
-                    <div class="box__container">
-                        <div class="circle"></div>
-
-
-                        <!-- Timeline 1 -->
-                        <div class="education__description">
-                            <h1 class="timeline__date">2020 - present</h1>
-                            <div class="education__description__content">
-                                <p class="timeline__title">Framer Desinger & Developer</p>
-                                <p class="timeline__position">WEN Solution</p>
-
-
-                                <p>Framer Desinger & Developer</p>
-                                <p>WEN Solution</p>
-
-                            </div>
-
-
-                        </div>
-                    </div>
-
-
+            <!-- individual grid col 4 -->
+            <div class="grid__col">
+              <img class="project-image" src="/assets/project-4.jpg" alt="" />
+              <div class="project__description">
+                <span class="project__title__center">
+                  Student Management System
+                </span>
+                <p>
+                  Automated Cloud Infrastructure Deployment Developed a
+                  Terraform-based automated provisioning system for multi-cloud
+                  environments, reducing setup time by 50%.
+                </p>
+              </div>
+              <div class="project__stack">
+                <!-- Project Stack Buttons -->
+                <div class="stack__buttons">
+                  <button class="btn-rounded__projects">Docker</button>
+                  <button class="btn-rounded__projects">Kubernetes</button>
+                  <button class="btn-rounded__projects">Bash</button>
                 </div>
-            </section>
-
-
-
-            <!-- Services -->
-            <section id="container__services">
-                <div class="services__button__div">
-                    <button class="btn-introduce"><i class="fas fa-boxes"></i>Services</button>
+                <!-- Project Stack Names and Source Code Button -->
+                <div class="project__name">
+                  <button class="btn-source-code">
+                    Source Code
+                    <i class="fas fa-arrow-right"></i>
+                  </button>
                 </div>
-
-                <div class="intro">
-                    <p>
-                        My <span class="color-green">Specializations</span>
-                    </p>
-                </div>
-
-
-                <!-- Box 1 Flex -->
-                <div class="outer__box">
-
-                    <div class="title_logo">
-                        <h1>Website Design</h1>
-                        <div class="color-green">
-                            <i class="fas fa-desktop"></i>
-                        </div>
-                    </div>
-                    <div class="services_description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nihil, libero explicabo
-                            doloribus quasi reiciendis enim optio aspernatur molestias laborum, et aliquid sunt. Esse,
-                            reprehenderit?</p>
-                    </div>
-
-                    <div class="project_number">24 Projects</div>
-                </div>
-
-                <!-- Box 2 Flex -->
-                <div class="outer__box">
-
-                    <div class="title_logo">
-                        <h1>Development</h1>
-                        <div class="color-green">
-                            <i class="fas fa-code"></i>
-                        </div>
-                    </div>
-                    <div class="services_description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nihil, libero explicabo
-                            doloribus quasi reiciendis enim optio aspernatur molestias laborum, et aliquid sunt. Esse,
-                            reprehenderit?</p>
-                    </div>
-
-                    <div class="project_number">108 Projects</div>
-                </div>
-
-
-                <!-- Box 1 Flex -->
-                <div class="outer__box">
-
-                    <div class="title_logo">
-                        <h1>Devops</h1>
-                        <div class="color-green">
-                            <i class="fas fa-hashtag"></i>
-                        </div>
-                    </div>
-                    <div class="services_description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nihil, libero explicabo
-                            doloribus quasi reiciendis enim optio aspernatur molestias laborum, et aliquid sunt. Esse,
-                            reprehenderit?</p>
-                    </div>
-
-                    <div class="project_number">4 Projects</div>
-                </div>
-
-
-
-            </section>
-
-
-
-            <!-- Skills -->
-            <section id="container__skills">
-                <div class="skills__button__div">
-                    <button class="btn-introduce"><i class="fas fa-hat-wizard"></i>My Skills</button>
-                </div>
-
-                <div class="intro">
-                    <p>
-                        My <span class="color-green">Advantages</span>
-                    </p>
-                </div>
-
-                <!-- Grid Container for cirlce -->
-                <div class="grid__circle__main__container">
-
-                    <!-- single circle__container 1 -->
-                    <div class="circle__container">
-                        <div class="skill_circle">
-                            <img class="skill_image" src="/assets/html.svg" alt="">
-                            <span class="color-green timeline__title">92%</span>
-                            <div>HTML</div>
-                        </div>
-                    </div>
-
-                    <!-- single circle__container 1 -->
-                    <div class="circle__container">
-                        <div class="skill_circle">
-                            <img class="skill_image" src="/assets/css.svg" alt="">
-                            <span class="color-green timeline__title">92%</span>
-                            <div>CSS</div>
-                        </div>
-                    </div>
-
-                    <!-- single circle__container 1 -->
-                    <div class="circle__container">
-                        <div class="skill_circle">
-                            <img class="skill_image" src="/assets/javascript.svg" alt="">
-                            <span class="color-green timeline__title">92%</span>
-                            <div>JavaScript</div>
-                        </div>
-                    </div>
-
-                    <!-- single circle__container 1 -->
-                    <div class="circle__container">
-                        <div class="skill_circle">
-                            <img class="skill_image" src="/assets/react.svg" alt="">
-                            <span class="color-green timeline__title">92%</span>
-                            <div>React</div>
-                        </div>
-                    </div>
-
-                    <!-- single circle__container 1 -->
-                    <div class="circle__container">
-                        <div class="skill_circle">
-                            <img class="skill_image" src="/assets/tailwind-css.svg" alt="">
-                            <span class="color-green timeline__title">92%</span>
-                            <div>Tailwind CSS</div>
-                        </div>
-                    </div>
-
-                    <!-- single circle__container 1 -->
-                    <div class="circle__container">
-                        <div class="skill_circle">
-                            <img class="skill_image" src="/assets/git.svg" alt="">
-                            <span class="color-green timeline__title">92%</span>
-                            <div>GIT</div>
-                        </div>
-                    </div>
-
-                    <!-- single circle__container 1 -->
-                    <div class="circle__container">
-                        <div class="skill_circle">
-                            <img class="skill_image" src="/assets/typescript.svg" alt="">
-                            <span class="color-green timeline__title">92%</span>
-                            <div>TypeScript</div>
-                        </div>
-                    </div>
-
-                    <!-- single circle__container 1 -->
-                    <div class="circle__container">
-                        <div class="skill_circle">
-                            <img class="skill_image" src="/assets/docker.svg"">
-                            <span class=" color-green timeline__title">92%</span>
-                            <div>Docker</div>
-                        </div>
-                    </div>
-
-                    <!-- single circle__container 1 -->
-                    <div class="circle__container">
-                        <div class="skill_circle">
-                            <img class="skill_image" src="/assets/figma.svg"">
-                                                                    <span class=" color-green
-                                timeline__title">92%</span>
-                            <div>Figma</div>
-                        </div>
-                    </div>
-
-                    <!-- single circle__container 1 -->
-                    <div class="circle__container">
-                        <div class="skill_circle">
-                            <img class="skill_image" src="/assets/python.svg"">
-                                                                                        <span class=" color-green
-                                timeline__title">92%</span>
-                            <div>Python</div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-            </section>
-
-
-
-            <!-- Projects Display Section-->
-            <section id="container__projects">
-                <div class="projects__button__div">
-                    <button class="btn-introduce"><i class="fas fa-hat-wizard"></i>Portfolio</button>
-                </div>
-
-                <div class="intro">
-                    <p>
-                        My <span class="color-green">Projects</span>
-                    </p>
-                </div>
-
-
-
-                <!-- display all the done projects -->
-                <div class="project__grid__main__container">
-                    <!-- individual grid col 1 -->
-                    <div class="grid__col">
-                        <img class="project-image" src="/assets/project-1.jpg" alt="">
-
-                        <div class="project__stack">
-                            <button class="btn-rounded">React</button>
-                            <button class="btn-rounded">Tailwind CSS</button>
-                            <button class="btn-rounded">Python</button>
-
-                        </div>
-
-                        <div class="project__name"><span class="project__title__center">
-                                Student Management System
-                            </span>
-                            <button class="btn-source-code">
-                                Source Code
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-
-
-
-                    <!-- individual grid col 2 -->
-                    <div class="grid__col">
-                        <img class="project-image" src="/assets/project-2.jpg" alt="">
-
-                        <div class="project__stack">
-                            <button class="btn-rounded">React</button>
-                            <button class="btn-rounded">Tailwind CSS</button>
-
-
-                        </div>
-
-                        <div class="project__name">
-
-                            <span class="project__title__center">
-                                Ecommerce Website
-                            </span>
-                            <button class="btn-source-code">
-                                Source Code
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-
-
-
-                    <!-- individual grid col 3 -->
-                    <div class="grid__col">
-                        <img class="project-image" src="/assets/project-3.jpg" alt="">
-
-                        <div class="project__stack">
-                            <button class="btn-rounded">React</button>
-                            <button class="btn-rounded">Tailwind CSS</button>
-                            <button class="btn-rounded">Python</button>
-
-                        </div>
-
-                        <div class="project__name"><span class="project__title__center">
-                                Ecommerce Website
-                            </span>
-                            <button class="btn-source-code">
-                                Source Code
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-
-
-                    <!-- individual grid col 4 -->
-                    <div class="grid__col">
-                        <img class="project-image" src="/assets/project-4.jpg" alt="">
-
-                        <div class="project__stack">
-                            <button class="btn-rounded">React</button>
-                            <button class="btn-rounded">Tailwind CSS</button>
-                            <button class="btn-rounded">Python</button>
-
-                        </div>
-
-                        <div class="project__name"><span class="project__title__center">
-                                Ecommerce Website
-                            </span>
-                            <button class="btn-source-code">
-                                Source Code
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-
-
-                </div>
-
-            </section>
-
-
-
-
-            <!-- Contact US Form -->
-            <section id="container__contactus">
-                <div class="projects__button__div">
-                    <button class="btn-introduce"><i class="fas fa-hat-wizard"></i>Contact</button>
-                </div>
-
-                <div class="intro">
-                    <p>
-                        Let's Work <span class="color-green">Together</span>
-                    </p>
-                </div>
-
-
-
-                <!-- Contact Form -->
-
-
-
-                <form class="form__container" onsubmit="onSubmitForm(event)">
-                    <div class="form__row">
-                        <label for="fname">Full Name
-                        </label>
-                        <input type="text" id="name" name="fname" required>
-                    </div>
-                    <div class="form__row">
-                        <label for="email">Email
-                        </label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form__row">
-                        <label for="phone">Phone
-                        </label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    <div class="form__row">
-                        <label for="subject">Subject
-                        </label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    <div class="form__row">
-                        <label for="message">Message
-                        </label>
-                        <textarea rows="6" id="message" name="message" required></textarea>
-                    </div>
-
-                    <div class="btn__submit">
-                        <button type="submit">
-                            Send Message
-                        </button>
-                    </div>
-                </form>
-
-            </section>
-
-
-        </div>
-
-
-
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact US Form -->
+        <section id="container__contactus">
+          <div class="projects__button__div">
+            <button class="btn-introduce">
+              <!-- <i class="fas fa-hat-wizard"></i> -->
+              <i class="fas fas-solid fa-envelope"></i> Contact
+            </button>
+          </div>
+
+          <div class="intro">
+            <p>Let's Work <span class="color-green">Together</span></p>
+          </div>
+
+          <!-- Contact Form -->
+
+          <form class="form__container" onsubmit="onSubmitForm(event)">
+            <div class="form__row">
+              <label for="fname">Full Name </label>
+              <input type="text" id="name" name="fname" required />
+            </div>
+            <div class="form__row">
+              <label for="email">Email </label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form__row">
+              <label for="phone">Phone </label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+            <div class="form__row">
+              <label for="subject">Subject </label>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+            <div class="form__row">
+              <label for="message">Message </label>
+              <textarea
+                rows="6"
+                id="message"
+                name="message"
+                required
+              ></textarea>
+            </div>
+
+            <div class="btn__submit">
+              <button type="submit">Send Message</button>
+            </div>
+          </form>
+        </section>
+      </div>
     </div>
 
-
-    <script type=" text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script
+      type=" text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
