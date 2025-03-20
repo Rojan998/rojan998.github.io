@@ -562,10 +562,17 @@ textarea:focus {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   /* Profile Image */
   .profile__image {
     width: 175px;
     height: 175px;
+  }
+
+  .grid__col {
+    font-size: var(--font-sm);
+  }
+  .project__stack {
+    left: 5%;
   }
 }
