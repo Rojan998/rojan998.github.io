@@ -402,7 +402,7 @@ INTRODUCE SECTION
 
 .project__stack {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   justify-content: space-around;
   position: absolute;
   bottom: 15%;
@@ -425,12 +425,13 @@ INTRODUCE SECTION
   font-size: var(--font-lg);
 }
 
-.btn-rounded__projects {
-  padding: 0.75rem 1.75rem;
+.btn-rounded__projects,
+.btn-source-code {
+  padding: 12px 12px;
   background-color: black;
   border: 1px solid white;
   border-radius: 18px;
-  margin-right: 0.75rem;
+  /* margin-right: 0.75rem; */
   color: white;
 }
 
@@ -460,23 +461,13 @@ INTRODUCE SECTION
 }
 
 .project__name {
-  margin-top: 0.75rem;
+  /* margin-top: 0.75rem; */
   font-size: var(--font-lg);
   text-align: center;
   display: flex;
   align-items: center;
   /* gap: 3rem; */
   justify-content: space-between;
-}
-
-.btn-source-code {
-  background-color: #000;
-  color: white;
-  outline: none;
-  cursor: pointer;
-  border: 1px solid white;
-  padding: 0.25rem 0.75rem;
-  border-radius: 12px;
 }
 
 .btn-source-code:hover,
@@ -574,5 +565,22 @@ textarea:focus {
   }
   .project__stack {
     left: 5%;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  .grid__col {
+    font-size: var(--font-sm);
+  }
+  .project__stack {
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .btn-rounded__projects {
+    width: fit-content;
+    font-size: 12px;
+    padding: 12px 12px;
   }
 }
