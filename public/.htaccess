@@ -1,0 +1,20 @@
+# This file only has an effect on Apache-based hosting (e.g. cPanel shared
+# hosting). GitHub Pages ignores .htaccess entirely — its equivalents
+# (HTTPS enforcement, apex→www redirect, custom domain) are configured in
+# the repo's Settings → Pages instead. Kept here for portability in case
+# this site is ever moved to Apache-based hosting again.
+
+# Force HTTPS and the canonical "www" host for rojanadhikari.dev.
+# Requires AutoSSL/a valid certificate to be issued for both
+# rojanadhikari.dev and www.rojanadhikari.dev before this is uploaded,
+# otherwise the HTTPS redirect will fail to load.
+RewriteEngine On
+
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://www.rojanadhikari.dev%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^rojanadhikari\.dev$ [NC]
+RewriteRule ^ https://www.rojanadhikari.dev%{REQUEST_URI} [L,R=301]
+
+# Serve the static Next.js 404 page for unmatched routes.
+ErrorDocument 404 /404.html
