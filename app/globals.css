@@ -14,6 +14,24 @@
   --color-accent-soft: #45bdb31f;
 }
 
+/* Light theme overrides, applied via a `data-theme` attribute set on <html>
+   by the inline script in app/layout.tsx (before first paint) and toggled at
+   runtime by components/ThemeToggle.tsx. Every color in the site is consumed
+   through these custom properties, so no component-level changes are needed. */
+:root[data-theme="light"] {
+  --color-bg: #fafaf9;
+  --color-surface: #f2f1ee;
+  --color-surface-hover: #e9e8e4;
+  --color-border: #e2e1dd;
+  --color-border-strong: #cac9c4;
+  --color-text: #17181a;
+  --color-text-muted: #52525a;
+  --color-text-dim: #6f6f74;
+  --color-accent: #0f766e;
+  --color-accent-hover: #0c5f58;
+  --color-accent-soft: #0f766e1f;
+}
+
 @theme inline {
   --color-bg: var(--color-bg);
   --color-surface: var(--color-surface);
@@ -42,6 +60,10 @@
 
 html {
   color-scheme: dark;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
 }
 
 body {

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { profile } from "@/data/profile";
 import { SkipLink } from "@/components/SkipLink";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -70,6 +71,24 @@ export const metadata: Metadata = {
   },
 };
 
+// Runs before first paint (from <head>, ahead of hydration) so the theme is
+// correct on the very first frame instead of flashing dark-then-light.
+// Kept in sync with the fallback in components/ThemeToggle.tsx.
+const themeBootScript = `
+(function () {
+  try {
+    var stored = localStorage.getItem("theme");
+    var theme =
+      stored === "light" || stored === "dark"
+        ? stored
+        : window.matchMedia("(prefers-color-scheme: light)").matches
+          ? "light"
+          : "dark";
+    document.documentElement.dataset.theme = theme;
+  } catch (e) {}
+})();
+`;
+
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -106,8 +125,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
+      </head>
       <body className="flex min-h-full flex-col bg-bg text-text antialiased">
         <script
           type="application/ld+json"
@@ -115,6 +138,9 @@ export default function RootLayout({
         />
         <SkipLink />
         {children}
+        <div className="fixed bottom-5 right-5 z-50">
+          <ThemeToggle />
+        </div>
       </body>
     </html>
   );
