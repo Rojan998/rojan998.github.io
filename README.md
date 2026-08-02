@@ -243,3 +243,35 @@ build time.
   behind `prefers-reduced-motion: no-preference` in `app/globals.css`.
 - All interactive elements have a minimum 44×44px hit target and a visible
   `:focus-visible` outline.
+
+## Dark / light theme
+
+Every color in the site is a CSS custom property (`--color-bg`, `--color-text`,
+`--color-accent`, etc.) defined in `app/globals.css` and consumed through
+Tailwind's `@theme inline` mapping (`bg-bg`, `text-text`, `bg-accent`, ...).
+No component hardcodes a color, so both themes are just two variable sets:
+
+- `:root` — the default, dark palette.
+- `:root[data-theme="light"]` — the light palette override.
+
+**How the theme is chosen and applied:**
+
+1. An inline script in `app/layout.tsx` (`themeBootScript`) runs from `<head>`
+   before first paint. It reads `localStorage.theme`; if unset, it falls back
+   to the OS-level `prefers-color-scheme` media query. It sets
+   `document.documentElement.dataset.theme` accordingly — this is what keeps
+   the correct theme from a full page reload without a flash of the other
+   theme.
+2. `components/ThemeToggle.tsx` is a small client component (sun/moon button)
+   rendered once, as a fixed floating button in the bottom-right corner of
+   every page (`app/layout.tsx`), so it's always reachable regardless of
+   scroll position or the sidebar's fixed-height layout. Clicking it flips
+   `data-theme` on `<html>`, persists the choice to `localStorage`, and
+   notifies the component via `useSyncExternalStore` (no React Context
+   needed since there's a single toggle instance).
+3. `html[data-theme="light"] { color-scheme: light; }` in `globals.css` keeps
+   native form controls/scrollbars in sync with the chosen theme too.
+
+To add a new themed color: add the dark value under `:root`, its light
+override under `:root[data-theme="light"]`, and reference it the same way
+Tailwind already does for the existing tokens — no toggle logic to touch.
