@@ -7,7 +7,7 @@ import type { EducationEntry } from "./types";
  */
 export const education: EducationEntry = {
   degree: "Master of Science in Computational Science – Computer Science",
-  institution: "[UNIVERSITY NAME]",
+  institution: "University of Central Oklahoma - Edmond, Oklahoma",
   graduation: "May 2025",
   description:
     "Graduate study focused on computer science, computational methods, software development, data processing, and applied technical problem-solving.",
