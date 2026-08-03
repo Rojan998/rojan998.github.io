@@ -32,7 +32,7 @@ export function Hero() {
           download
           className="inline-flex min-h-11 items-center gap-2 rounded-md border border-border-strong px-4 py-2.5 text-sm font-semibold text-text transition-colors hover:border-accent hover:text-accent"
         >
-          Download Résumé
+          Download Resume
           <Download aria-hidden="true" size={16} strokeWidth={2} />
         </a>
         <a

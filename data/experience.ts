@@ -9,7 +9,7 @@ export const experience: ExperienceEntry[] = [
   {
     id: "senior-data-engineer-energy-utilities",
     title: "Senior Data Engineer",
-    organization: "Enterprise Energy and Utilities Client · Contract",
+    organization: "Duke Energy (Energy and Utilities) · Contract",
     dateRange: "November 2025 – Present",
     summary:
       "Build and operate AWS cloud data infrastructure for an energy and utilities client, provisioning environments with Terraform and Kubernetes while supporting real-time streaming pipelines built on Apache Flink, Kafka, and Debezium.",
@@ -44,7 +44,7 @@ export const experience: ExperienceEntry[] = [
   {
     id: "senior-data-engineer-midfirst-bank",
     title: "Senior Data Engineer",
-    organization: "Mid First Bank · Contract",
+    organization: "Mid First Bank (Financial) · Contract",
     dateRange: "Oct 2024 – Oct 2025",
     summary:
       "Led modernization of a banking data platform, migrating legacy SQL Server and Oracle pipelines to an Azure-based lakehouse on Databricks and Delta Lake, with Airflow-orchestrated ingestion and Snowflake dimensional models for risk, lending, and regulatory reporting.",
@@ -83,8 +83,8 @@ export const experience: ExperienceEntry[] = [
   {
     id: "data-engineer-elara-caring",
     title: "Data Engineer",
-    organization: "Elara Caring · Contract",
-    dateRange: "Sept 2023 – Oct 2025",
+    organization: "Elara Caring (Healthcare) · Contract",
+    dateRange: "Sept 2023 – Oct 2024",
     summary:
       "Built a HIPAA-compliant healthcare data platform on Azure, developing Databricks and PySpark pipelines that ingest and transform patient, claims, and HL7/FHIR clinical data into governed Delta Lake and Synapse models with Purview-tracked lineage.",
     achievements: [
@@ -121,7 +121,7 @@ export const experience: ExperienceEntry[] = [
   {
     id: "data-engineer-humana",
     title: "Data Engineer",
-    organization: "Humana · Contract",
+    organization: "Humana (Healthcare Insurance) · Contract",
     dateRange: "Feb 2021 – July 2023",
     summary:
       "Built an AWS-based healthcare data platform for claims, enrollment, and provider data, using Glue and EMR for PySpark transformations, Airflow-orchestrated ingestion, and Redshift dimensional models with SCD Type 2, while enforcing HIPAA-aligned access controls.",

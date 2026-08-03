@@ -24,7 +24,7 @@ export const profile: SiteProfile = {
   linkedin: "https://www.linkedin.com/in/rojan998/",
   // Update to the domain this site is actually deployed to.
   siteUrl: "https://www.rojanadhikari.dev",
-  resumePath: "/rojan-adhikari-data-engineer-resume.pdf",
+  resumePath: "/Rojan_Adhikari_Resume-updated.pdf",
   // Update whenever a new resume file is uploaded to /public.
   resumeLastUpdated: "July 2026",
   availability: {
